@@ -1,11 +1,7 @@
-# Privacy and public-data boundary
+# Public data boundary
 
-This repository contains analysis code, simulation outputs and aggregate statistical source data only.
+Human-derived source data are limited to group means, medians, uncertainty intervals, test summaries and model comparisons. The data catalogue describes each table and its analysis unit. Independent simulations and empirical-calibrated simulations are distinguished in the catalogue and model/branch fields.
 
-The public release excludes all row-level human-participant information, including raw or processed recordings, participant and seizure labels, individual measurements, clinical annotations, electrode labels, recording dates, internal case codes, linkage keys and local file paths. Supplementary Table 1 and the clinical signal underlying Fig. 1 are not distributed here.
+No raw or processed SEEG, clinical records, individual participant/seizure/window/channel rows, individual trajectories, identifiers, linkage tables, acquisition metadata or private workspace paths are included. Removing identifiers alone is insufficient: individual-level measurements are excluded as well. Supplementary Table 1 and clinical signal illustrations are outside the public package.
 
-`Source_Data.xlsx` contains only group-level estimates, uncertainty intervals, test summaries, model summaries and simulation results. Counts such as `n_patients` describe the sample size of an aggregate estimate and do not identify any participant.
-
-Scripts that require restricted inputs use the `PAPER1_PROJECT_ROOT` environment variable. Those inputs must remain in an access-controlled institutional workspace and must never be committed.
-
-The public aggregate Fig. 6 renderer intentionally omits participant-level points. It reconstructs the aggregate layers from `Source_Data.xlsx` without accessing restricted inputs.
+R figures are aggregate views of the released numerical results. Individual-point layers and clinical signals from manuscript figures are not reconstructed. The public code accepts generic authorized inputs and includes a synthetic verification example.

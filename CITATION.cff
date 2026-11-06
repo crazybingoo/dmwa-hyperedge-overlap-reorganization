@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this code, please cite the associated manuscript and this software repository."
 title: "DMWA role-reciprocity code for seizure higher-order networks"
-version: "0.2.0"
-date-released: "2026-09-03"
+version: "0.3.0"
+date-released: "2026-11-06"
 repository-code: "https://github.com/crazybingoo/dmwa-role-reciprocity-code"
 license: "MIT"
 authors:

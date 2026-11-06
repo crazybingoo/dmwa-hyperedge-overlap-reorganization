@@ -1,3 +1,7 @@
-numpy>=1.24
-pandas>=2.0
-tabulate>=0.9
+numpy
+pandas
+scipy
+numba
+llvmlite
+networkx
+scikit-learn

@@ -1,0 +1,41 @@
+dataset,file,rows,analysis_unit,notes
+Fig2_seizure_means,data/Fig2_seizure_means.csv,25,24 seizures; group means and SEM,
+Fig2_patient_means,data/Fig2_patient_means.csv,25,14 participants; group means and SEM,
+Fig2_contrasts,data/Fig2_contrasts.csv,20,24 paired seizures; BH across 20 tests,
+Fig3_S_levels,data/Fig3_S_levels.csv,5,aggregate across participants,
+Fig3_role_levels,data/Fig3_role_levels.csv,15,aggregate across participants,
+Fig3_contrasts,data/Fig3_contrasts.csv,16,aggregate across participants,
+Fig4_levels,data/Fig4_levels.csv,15,aggregate across participants,
+Fig4_contrasts,data/Fig4_contrasts.csv,12,aggregate across participants,
+Fig5_components,data/Fig5_components.csv,6,aggregate across participants,"Population SD (ddof=0), main Fig. 5 convention"
+Fig5_joint,data/Fig5_joint.csv,5,aggregate across participants,"Population SD (ddof=0), main Fig. 5 convention"
+Fig5_feature_sets,data/Fig5_feature_sets.csv,6,aggregate across participants,"Population SD (ddof=0), main Fig. 5 convention"
+Fig5_held_out,data/Fig5_held_out.csv,1,aggregate across participants,Group Brier scores; no held-out individual predictions
+Fig6_joint,data/Fig6_joint.csv,10,aggregate across participants,
+Fig6_overlap_tests,data/Fig6_overlap_tests.csv,12,aggregate across participants,
+Fig6_overlap_levels,data/Fig6_overlap_levels.csv,15,aggregate across participants,
+Fig6_components,data/Fig6_components.csv,48,aggregate across participants,
+Fig7_ablation,data/Fig7_ablation.csv,12,aggregate across participants,
+Fig7_contrasts,data/Fig7_contrasts.csv,8,aggregate across participants,
+Fig7_decomposition,data/Fig7_decomposition.csv,10,aggregate across participants,
+Fig8_changes,data/Fig8_changes.csv,108,independent simulation ensemble (40 or 60 realizations),SFig8-10 include empirical calibration only as group summaries
+Fig8_densities,data/Fig8_densities.csv,12,independent simulation ensemble (40 or 60 realizations),SFig8-10 include empirical calibration only as group summaries
+Fig8_residuals,data/Fig8_residuals.csv,6,independent simulation ensemble (40 or 60 realizations),SFig8-10 include empirical calibration only as group summaries
+SFig7_density,data/SFig7_density.csv,60,independent simulation ensemble (40 or 60 realizations),SFig8-10 include empirical calibration only as group summaries
+SFig7_organization,data/SFig7_organization.csv,60,independent simulation ensemble (40 or 60 realizations),SFig8-10 include empirical calibration only as group summaries
+SFig8_changes,data/SFig8_changes.csv,96,"group aggregate; empirical or calibrated simulation, see model/branch",SFig8-10 include empirical calibration only as group summaries
+SFig8_density_means,data/SFig8_density_means.csv,5,"group aggregate; empirical or calibrated simulation, see model/branch",SFig8-10 include empirical calibration only as group summaries
+SFig9_common,data/SFig9_common.csv,4,"group aggregate; empirical or calibrated simulation, see model/branch",SFig8-10 include empirical calibration only as group summaries
+SFig9_decomposition,data/SFig9_decomposition.csv,6,"group aggregate; empirical or calibrated simulation, see model/branch",SFig8-10 include empirical calibration only as group summaries
+SFig9_fixed,data/SFig9_fixed.csv,24,"group aggregate; empirical or calibrated simulation, see model/branch",SFig8-10 include empirical calibration only as group summaries
+SFig10_preferences,data/SFig10_preferences.csv,72,"group aggregate; empirical or calibrated simulation, see model/branch",SFig8-10 include empirical calibration only as group summaries
+SFig1_components,data/SFig1_components.csv,60,aggregate across participants,"Sample SD (ddof=1), fixed bootstrap scales for Supplementary Fig. 1"
+SFig1_joint,data/SFig1_joint.csv,10,aggregate across participants,"Sample SD (ddof=1), fixed bootstrap scales for Supplementary Fig. 1"
+SFig1_pairwise,data/SFig1_pairwise.csv,18,aggregate across participants,"Sample SD (ddof=1), fixed bootstrap scales for Supplementary Fig. 1"
+SFig2_roles,data/SFig2_roles.csv,10,aggregate across participants,
+SFig3_cutoff,data/SFig3_cutoff.csv,18,aggregate across participants,
+SFig4_order_roles,data/SFig4_order_roles.csv,30,aggregate across participants,
+SFig5_density,data/SFig5_density.csv,240,aggregate across participants,
+SFig6_balance,data/SFig6_balance.csv,12,aggregate across participants,
+SFig6_S,data/SFig6_S.csv,8,aggregate across participants,
+primary_defined_statistics,data/primary_defined_statistics.csv,28,aggregate across participants,

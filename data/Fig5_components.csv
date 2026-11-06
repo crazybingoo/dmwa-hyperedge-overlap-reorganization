@@ -1,0 +1,7 @@
+target_stage,feature,mean_diff_z,mean_diff_raw,n_patients
+ictal-combined,S,-1.3650275204159401,-0.043636151266005702,
+ictal-combined,source_sink_gini_gap,0.90422774233217695,0.13033392375786901,
+ictal-combined,sink_minus_source_entropy_gap,0.99055923403133705,0.12935677797617801,
+ictal-combined,sink_minus_source_pr_gap,0.94553631550087602,0.14825303774833601,
+ictal-combined,reciprocal_fraction_mean,0.67070778683756405,0.065264462063040998,
+ictal-combined,dense_fraction_mean,-0.40141445415437199,-0.041956743782067901,

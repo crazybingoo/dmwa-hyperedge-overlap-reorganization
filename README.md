@@ -1,94 +1,38 @@
-# DMWA Role–Reciprocity Code and Source Data
+# DMWA role–reciprocity: revised code and aggregate source data
 
-This repository contains analysis code and privacy-sanitized aggregate source data for Fig. 2–Fig. 7 and Supplementary Fig. 1–Supplementary Fig. 4 of the manuscript on directed multi-order weighted hypergraph (DMWA) role–reciprocity reorganization in epileptic seizures.
+Release 0.3.0 accompanies the November 2026 revision: main Figs. 2–8 and Supplementary Figs. 1–10.
 
-## Contents
+- `python/`: PLV/COC selection, DMWA weights, source/sink gaps, exact motifs, hypergraph controls, held-out model comparison and independent simulations.
+- `matlab/`: compact DMWA construction reference implementation.
+- `data/`: reviewed group summaries and simulation results. `data/catalog.csv` maps every dataset to its analysis unit; filenames identify the associated figure.
+- `r_figures/render_aggregates.R`: executable R plotting implementation for the public aggregate results.
+- `tests/verify_core.py`: synthetic parity, structural identities, motif census and null-preservation checks.
+- `docs/methods.md`: formulas and analysis conventions, including the main/SI standardization distinction.
 
-- `Source_Data.xlsx`: aggregate numerical source data underlying Fig. 2–Fig. 7, Supplementary Fig. 1–Supplementary Fig. 4 and Supplementary Table 2. Row-level human-participant data are excluded.
-- `matlab/`: MATLAB scripts for DMWA construction, macro-state reconstruction, motif extraction, null models, ablation analyses and supplementary sensitivity/simulation checks.
-- `python/`: Python scripts for patient-level summaries, joint state-space analysis, null-model inference and simulation-grid stability.
-- `r_figures/`: R scripts for the current main and supplementary figures, grouped by figure.
+## Run
 
-The workbook contains a `README`, a figure/table-to-range `Data_Map`, and a panel-aware `Data_Dictionary`. Analysis units are stated explicitly because they differ across panels.
+From the repository root, with Python 3.10+ and R 4.3+:
 
-## Repository layout
-
-```text
-Source_Data.xlsx
-matlab/
-  Fig_2/ ... Fig_6/
-  Supplementary_Fig_1_2/
-  Supplementary_Fig_3/
-  core_reference/
-python/
-  Fig_3/ Fig_5/ Fig_6/ Fig_7/
-r_figures/
-  Fig_2/ ... Fig_7/
-  Supplementary_Fig_1_2/
-  Supplementary_Fig_3/
-  shared/
-docs/
-metadata/
+```sh
+python -m pip install -r requirements.txt
+python tests/verify_core.py
+Rscript r_figures/render_aggregates.R
 ```
 
-## Data availability and privacy boundary
+The renderer uses base R and writes PDF/PNG aggregate panels to `outputs/aggregate_figures`. No private inputs are needed. These panels expose the released numerical summaries; the manuscript's individual-point layers and clinical traces are excluded.
 
-`Source_Data.xlsx` contains only group-level estimates, uncertainty intervals, test summaries, model summaries and simulation results. It contains no participant or seizure labels and no row-level human-participant measurements.
+Optional full independent simulations:
 
-The repository intentionally excludes:
-
-- raw or preprocessed SEEG recordings and all row-level derived values;
-- participant names, clinical identifiers, recording dates and electrode labels;
-- internal case codes and patient-linkage tables;
-- local absolute file paths and workstation-specific information;
-- intermediate files that could reconnect public labels to private clinical records;
-- Supplementary Table 1, because it contains clinical patient/seizure characteristics;
-- the Fig. 1 clinical signal source and digitized clinical trace.
-
-The full boundary and release rules are documented in `docs/privacy_and_data_boundary.md`.
-
-Raw SEEG recordings and clinical records are human-participant data and are not publicly redistributable through GitHub because of privacy, ethics, consent and clinical data-use restrictions. Access, when permissible, requires institutional review, appropriate ethics approval and a data-use agreement.
-
-For journal submission, `Source_Data.xlsx` should also be uploaded as the manuscript's formal Source Data file; the GitHub copy is a versioned public mirror and does not replace the journal upload.
-
-## Local data root
-
-Scripts that reproduce patient-derived analyses require authorized access to the restricted local inputs. Set `PAPER1_PROJECT_ROOT` to a private workspace containing the input and derived folders described in `docs/input_schema.md`.
-
-PowerShell:
-
-```powershell
-$env:PAPER1_PROJECT_ROOT = "<AUTHORIZED_PRIVATE_WORKSPACE>"
+```sh
+python python/simulate.py --pilot
+python python/simulate.py
+python python/kuramoto_count_null.py
 ```
 
-Bash:
+Python core functions can also be imported with `python/` on the module search path. Input matrices and synthetic examples are described in `docs/methods.md` and the tests.
 
-```bash
-export PAPER1_PROJECT_ROOT=<AUTHORIZED_PRIVATE_WORKSPACE>
-```
+## Data availability
 
-The public repository contains no raw inputs and no private linkage mapping.
+Only group-level human-derived results and simulation summaries are public. Raw/processed SEEG and participant-level measurements are not included. See `docs/privacy_and_data_boundary.md`. CSV values preserve the source analysis precision; manuscript displays use rounded values.
 
-## Current figure scripts
-
-- Fig. 2: `r_figures/Fig_2/render_fig2_final.R`
-- Fig. 3: `r_figures/Fig_3/render_fig3_final.R`
-- Fig. 4: `r_figures/Fig_4/render_fig4_final.R`
-- Fig. 5: `r_figures/Fig_5/render_fig5_final.R`
-- Fig. 6 aggregate-only public renderer: `r_figures/Fig_6/render_fig6_final.R`
-- Fig. 7: `r_figures/Fig_7/render_fig7_final.R`
-- Supplementary Figs. 1–2: `r_figures/Supplementary_Fig_1_2/render_supplementary_fig1_2.R`
-- Supplementary Fig. 3: `r_figures/Supplementary_Fig_3/render_supplementary_fig3.R`
-- Supplementary Fig. 4 aggregate-only public renderer: `r_figures/Supplementary_Fig_4/render_supplementary_fig4.R`
-
-The current Fig. 6 matching summary is generated by `python/Fig_6/density_order_matching_summary.py`. Participant-level plot layers are intentionally not included in the public release.
-
-## Requirements
-
-- MATLAB R2023b or newer, with Signal Processing Toolbox and Statistics and Machine Learning Toolbox.
-- Python 3.10 or newer; install dependencies from `requirements.txt`.
-- R 4.3 or newer with `ggplot2`, `patchwork`, `readxl`, `dplyr`, `tidyr`, `svglite`, `ragg`, `scales` and `ggtext`.
-
-## Citation
-
-If you use this code, cite the associated manuscript and this repository. Software citation metadata are provided in `CITATION.cff`.
+The latest release supersedes the earlier figure numbering and source workbook. Git history retains the prior public release. Cite the associated manuscript and this repository using `CITATION.cff`.

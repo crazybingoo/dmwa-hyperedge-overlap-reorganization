@@ -1,0 +1,21 @@
+{
+  "release": "0.3.0",
+  "date": "2026-11-06",
+  "reviewed_text_and_csv_files": 61,
+  "aggregate_datasets": 40,
+  "aggregate_rows": 1153,
+  "inherited_public_history_blobs_scanned": 39,
+  "patient_records_in_payload": 0,
+  "raw_or_processed_SEEG_files": 0,
+  "identifier_or_private_path_findings": 0,
+  "binary_archives_in_payload": 0,
+  "checks": [
+    "explicit source and column review",
+    "numeric source-export parity",
+    "patient and clinical identifier token scan",
+    "individual-label and private-path scan",
+    "credential-pattern scan",
+    "CSV schema review",
+    "inherited public history and XLSX XML scan"
+  ]
+}
