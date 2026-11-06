@@ -1,4 +1,4 @@
-# DMWA role–reciprocity: revised code and aggregate source data
+# DMWA: Hyperedge Overlap Reorganization
 
 Release 0.3.0 accompanies the November 2026 revision: main Figs. 2–8 and Supplementary Figs. 1–10.
 

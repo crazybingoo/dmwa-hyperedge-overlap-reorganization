@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 message: "If you use this code, please cite the associated manuscript and this software repository."
-title: "DMWA role-reciprocity code for seizure higher-order networks"
+title: "DMWA: Hyperedge Overlap Reorganization"
 version: "0.3.0"
 date-released: "2026-11-06"
-repository-code: "https://github.com/crazybingoo/dmwa-role-reciprocity-code"
+repository-code: "https://github.com/crazybingoo/dmwa-hyperedge-overlap-reorganization"
 license: "MIT"
 authors:
   - name: "C.W. and co-authors"
@@ -12,4 +12,4 @@ keywords:
   - "DMWA"
   - "SEEG"
   - "epilepsy"
-  - "role reciprocity"
+  - "hyperedge overlap reorganization"
